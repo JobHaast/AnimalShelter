@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "10fde543-75cc-4596-b98c-2cdf9ab65017",
+		"name": "Animal Shelter API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all animals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/animals",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a animal on id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/animals/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"animals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get adoptable animals with pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/animals?offset=1&limit=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"animals"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get adoptable animals with filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/animals?name=Fido&type=1&gender=1&kids=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"animals"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Fido"
+						},
+						{
+							"key": "type",
+							"value": "1"
+						},
+						{
+							"key": "gender",
+							"value": "1"
+						},
+						{
+							"key": "kids",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Cat\",\r\n    \"Type\":2,\r\n    \"Gender\":2,\r\n    \"Sterile\": false,\r\n    \"ReasonForDisposal\":\"No reason at all\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/applications",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"applications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all interests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/interests",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"interests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get interest on id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/interests/39",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"interests",
+						"39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new interest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"AnimalId\":1,\r\n    \"UserId\": \"f0ecb079-10e4-4fc5-adfe-201c9ad29b1b\",\r\n    \"CustomerId\":9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/interests",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"interests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete interest based on id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/interests/39",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"interests",
+						"39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BirthDate\":\"2020-03-12\",\r\n    \"City\":\"Breda\",\r\n    \"CustomerNr\":\"1f593e87-4bc1-44f9-a5cd-10ee24b39c8e\",\r\n    \"Email\":\"Email@emal.com\",\r\n    \"FirstName\":\"Job\",\r\n    \"LastName\":\"Haast\",\r\n    \"Number\":39,\r\n    \"PhoneNumber\":\"0678787878\",\r\n    \"StreetName\":\"Lange Bedde\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

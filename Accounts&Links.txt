@@ -1,0 +1,13 @@
+Management:
+Link: https://animalshelterpawsmanagement.azurewebsites.net
+Email/Gebruikersnaam: docent@avans.nl
+Wachtwoord: Docent@avans1
+
+Klant:
+Link: https://animalshelterpaws.azurewebsites.net
+Email/Gebruikersnaam: docent2@avans.nl
+Wachtwoord: Docent@avans1
+
+Api:
+Link: https://animalshelterpawsapi.azurewebsites.net
+Postman collection: https://www.getpostman.com/collections/128c378b375e9aadee0e
